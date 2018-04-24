@@ -2043,6 +2043,7 @@ def save_config():  # pylint: disable=too-many-statements, too-many-branches
         'Blackhole': {
             'nzb_dir': NZB_DIR,
             'torrent_dir': TORRENT_DIR,
+            'force_magnet': FORCE_MAGNET,
         },
 
         'NZBs': {
