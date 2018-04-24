@@ -87,7 +87,7 @@ class GenericProvider(object):  # pylint: disable=too-many-instance-attributes
         if not self.login():
             return False
 
-        urls, filename = self._make_url(result, True)
+        urls, filename = self._make_url(result, sickbeard.FORCE_MAGNET)
 
         for url in urls:
             if 'NO_DOWNLOAD_NAME' in url:
@@ -495,7 +495,7 @@ class GenericProvider(object):  # pylint: disable=too-many-instance-attributes
             logger.log('Unable to extract torrent hash or name from magnet: {0}'.format(magnet), logger.ERROR)
             return ''
 
-    def _make_url(self, result, force_magnet):
+    def _make_url(self, result, force_magnet=False):
         if not result:
             return '', ''
 

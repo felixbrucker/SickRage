@@ -897,6 +897,21 @@
                                         </div>
                                     </div>
 
+                                    <div class="field-pair row">
+                                        <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                                            <label class="component-title">${_('Do not convert magnets')}</label>
+                                        </div>
+                                        <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12 component-desc">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <input type="checkbox" name="force_magnet" class="enabler"
+                                                           id="force_magnet" ${('', 'checked="checked"')[bool(sickbeard.FORCE_MAGNET)]}/>
+                                                    <label for="force_magnet">${_('add .magnet file to the blackhole folder')}</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <input type="submit" class="btn config_submitter" value="${_('Save Changes')}"/>
