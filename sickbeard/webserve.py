@@ -4305,7 +4305,7 @@ class ConfigSearch(Config):
         sickbeard.TORRENT_RPCURL = torrent_rpcurl
         sickbeard.TORRENT_AUTH_TYPE = torrent_auth_type
 
-        sickbeard.FORCE_MAGNET = force_magnet
+        sickbeard.FORCE_MAGNET = config.checkbox_to_value(force_magnet)
 
         sickbeard.SYNOLOGY_DSM_HOST = config.clean_url(syno_dsm_host)
         sickbeard.SYNOLOGY_DSM_USERNAME = syno_dsm_user
