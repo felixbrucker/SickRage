@@ -1030,6 +1030,7 @@ def initialize(consoleLogging=True):  # pylint: disable=too-many-locals, too-man
 
         NZB_DIR = check_setting_str(CFG, 'Blackhole', 'nzb_dir')
         TORRENT_DIR = check_setting_str(CFG, 'Blackhole', 'torrent_dir')
+        FORCE_MAGNET = check_setting_str(CFG, 'Blackhole', 'force_magnet')
 
         TV_DOWNLOAD_DIR = check_setting_str(CFG, 'General', 'tv_download_dir')
         PROCESS_AUTOMATICALLY = check_setting_bool(CFG, 'General', 'process_automatically')
