@@ -4231,7 +4231,7 @@ class ConfigSearch(Config):
                    torrent_dir=None, torrent_username=None, torrent_password=None, torrent_host=None,
                    torrent_label=None, torrent_label_anime=None, torrent_path=None, torrent_verify_cert=None,
                    torrent_seed_time=None, torrent_paused=None, torrent_high_bandwidth=None,
-                   torrent_rpcurl=None, torrent_auth_type=None, ignore_words=None, trackers_list=None, require_words=None, ignored_subs_list=None,
+                   torrent_rpcurl=None, torrent_auth_type=None, force_magnet=False, ignore_words=None, trackers_list=None, require_words=None, ignored_subs_list=None,
                    syno_dsm_host=None, syno_dsm_user=None, syno_dsm_pass=None, syno_dsm_path=None):
 
         results = []
@@ -4304,6 +4304,8 @@ class ConfigSearch(Config):
         sickbeard.TORRENT_HOST = config.clean_url(torrent_host)
         sickbeard.TORRENT_RPCURL = torrent_rpcurl
         sickbeard.TORRENT_AUTH_TYPE = torrent_auth_type
+
+        sickbeard.FORCE_MAGNET = force_magnet
 
         sickbeard.SYNOLOGY_DSM_HOST = config.clean_url(syno_dsm_host)
         sickbeard.SYNOLOGY_DSM_USERNAME = syno_dsm_user
